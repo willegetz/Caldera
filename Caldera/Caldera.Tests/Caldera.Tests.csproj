@@ -119,6 +119,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestableControllers\TestableHomeController.cs" />
     <Compile Include="Views\HomeViewsTest.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -5,6 +5,7 @@ using ApprovalTests.Asp.Mvc;
 using System;
 using ApprovalTests.Asp;
 using ApprovalTests.Reporters;
+using Caldera.Tests.TestableControllers;
 
 namespace Caldera.Tests.Views
 {
@@ -17,21 +18,21 @@ namespace Caldera.Tests.Views
         public void IndexView()
         {
             PortFactory.MvcPort = 49264;
-            MvcApprovals.VerifyMvcPage(new HomeController().Index);
+            MvcApprovals.VerifyMvcPage<TestableHomeController>(home => home.TestIndex);
         }
 
         [Test]
         public void AboutView()
         {
             PortFactory.MvcPort = 49264;
-            MvcApprovals.VerifyMvcPage(new HomeController().About);
+            MvcApprovals.VerifyMvcPage<TestableHomeController>(home => home.TestAbout);
         }
 
         [Test]
         public void ContactView()
         {
             PortFactory.MvcPort = 49264;
-            MvcApprovals.VerifyMvcPage(new HomeController().Contact);
+            MvcApprovals.VerifyMvcPage<TestableHomeController>(home => home.TestContact);
         }
     }
 }

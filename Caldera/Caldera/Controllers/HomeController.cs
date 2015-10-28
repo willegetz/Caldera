@@ -1,4 +1,5 @@
-﻿using ApprovalUtilities.Asp.Mvc;
+﻿using ApprovalTests.Asp.Mvc.Utilities;
+using ApprovalUtilities.Asp.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,25 +8,25 @@ using System.Web.Mvc;
 
 namespace Caldera.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : ControllerWithExplicitViews
     {
         public ActionResult Index()
         {
-            return View().Explicit();
+            return View();
         }
 
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
 
-            return View().Explicit();
+            return View();
         }
 
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
 
-            return View().Explicit();
+            return View();
         }
     }
 }
