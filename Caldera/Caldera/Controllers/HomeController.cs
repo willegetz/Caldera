@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ApprovalUtilities.Asp.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,7 +11,7 @@ namespace Caldera.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return View().Explicit();
         }
 
         public ActionResult About()
