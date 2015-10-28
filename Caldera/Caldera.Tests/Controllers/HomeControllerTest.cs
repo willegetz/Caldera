@@ -23,27 +23,15 @@ namespace Caldera.Tests.Controllers
         [Test]
         public void About()
         {
-            // Arrange
-            HomeController controller = new HomeController();
-
-            // Act
-            ViewResult result = controller.About() as ViewResult;
-
-            // Assert
-            Assert.AreEqual("Your application description page.", result.ViewBag.Message);
+            PortFactory.MvcPort = 49264;
+            MvcApprovals.VerifyMvcPage(new HomeController().About);
         }
 
         [Test]
         public void Contact()
         {
-            // Arrange
-            HomeController controller = new HomeController();
-
-            // Act
-            ViewResult result = controller.Contact() as ViewResult;
-
-            // Assert
-            Assert.IsNotNull(result);
+            PortFactory.MvcPort = 49264;
+            MvcApprovals.VerifyMvcPage(new HomeController().Contact);
         }
     }
 }
