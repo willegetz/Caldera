@@ -33,14 +33,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @{ 
-                var dateString = DateTime.Now.Year.ToString();
-                if (@ViewBag.Year != null)
-                {
-                    dateString = ViewBag.Year;
-                }
-                @String.Format("{0} -My ASP.NET Application", dateString);
-                    }</p>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>
 

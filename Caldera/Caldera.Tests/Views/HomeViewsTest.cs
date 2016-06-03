@@ -6,6 +6,7 @@ using System;
 using ApprovalTests.Asp;
 using ApprovalTests.Reporters;
 using Caldera.Tests.TestableControllers;
+using System.Text.RegularExpressions;
 
 namespace Caldera.Tests.Views
 {
@@ -18,21 +19,27 @@ namespace Caldera.Tests.Views
         public void IndexView()
         {
             PortFactory.MvcPort = 49264;
-            MvcApprovals.VerifyMvcPage<TestableHomeController>(home => home.TestIndex);
+            MvcApprovals.VerifyMvcPage<TestableHomeController>(home => home.TestIndex, CopyRightScrubber);
+        }
+
+        public static string CopyRightScrubber(string input)
+        {
+            string copyrightTag = @"<p>&copy; \d{4}";
+            return Regex.Replace(input, copyrightTag, "<p>&copy; 0000");
         }
 
         [Test]
         public void AboutView()
         {
             PortFactory.MvcPort = 49264;
-            MvcApprovals.VerifyMvcPage<TestableHomeController>(home => home.TestAbout);
+            MvcApprovals.VerifyMvcPage<TestableHomeController>(home => home.TestAbout, CopyRightScrubber);
         }
 
         [Test]
         public void ContactView()
         {
             PortFactory.MvcPort = 49264;
-            MvcApprovals.VerifyMvcPage<TestableHomeController>(home => home.TestContact);
+            MvcApprovals.VerifyMvcPage<TestableHomeController>(home => home.TestContact, CopyRightScrubber);
         }
     }
 }
