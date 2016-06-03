@@ -121,6 +121,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestableControllers\TestableAccountController.cs" />
     <Compile Include="TestableControllers\TestableHomeController.cs" />
+    <Compile Include="Utilities\CustomMvcScrubbers.cs" />
     <Compile Include="Views\AccountViewsTest.cs" />
     <Compile Include="Views\HomeViewsTest.cs" />
   </ItemGroup>
