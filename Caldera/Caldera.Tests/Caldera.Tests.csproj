@@ -38,7 +38,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="ApprovalTests.Asp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=11bd7d124fc62e0f, processorArchitecture=MSIL">
-      <HintPath>..\packages\ApprovalTests.Asp.1.0.0\lib\net40\ApprovalTests.Asp.dll</HintPath>
+      <HintPath>..\packages\ApprovalTests.Asp.1.1.0\lib\net40\ApprovalTests.Asp.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ApprovalUtilities, Version=3.0.0.0, Culture=neutral, PublicKeyToken=11bd7d124fc62e0f, processorArchitecture=MSIL">
@@ -119,7 +119,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestableControllers\TestableAccountController.cs" />
     <Compile Include="TestableControllers\TestableHomeController.cs" />
+    <Compile Include="Views\AccountViewsTest.cs" />
     <Compile Include="Views\HomeViewsTest.cs" />
   </ItemGroup>
   <ItemGroup>

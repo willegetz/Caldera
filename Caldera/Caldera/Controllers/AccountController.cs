@@ -9,11 +9,12 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Caldera.Models;
+using ApprovalTests.Asp.Mvc.Utilities;
 
 namespace Caldera.Controllers
 {
     [Authorize]
-    public class AccountController : Controller
+    public class AccountController : ControllerWithExplicitViews
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;

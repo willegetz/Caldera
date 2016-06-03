@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head><base href="http://localhost:49264/TestableAccount">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in - My ASP.NET Application</title>
+    <link href="/Content/bootstrap.css" rel="stylesheet"/>
+<link href="/Content/site.css" rel="stylesheet"/>
+
+    <script src="/Scripts/modernizr-2.6.2.js"></script>
+
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Application name</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/Home/About">About</a></li>
+                    <li><a href="/Home/Contact">Contact</a></li>
+                </ul>
+                    <ul class="nav navbar-nav navbar-right">
+        <li><a href="/Account/Register" id="registerLink">Register</a></li>
+        <li><a href="/Account/Login" id="loginLink">Log in</a></li>
+    </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        
+
+
+<h2>Log in.</h2>
+<div class="row">
+    <div class="col-md-8">
+        <section id="loginForm">
+<form action="/Account/Login?ReturnUrl=HelloWorld" class="form-horizontal" method="post" role="form"><!-- request verification token -->                <h4>Use a local account to log in.</h4>
+                <hr />
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="Email">Email</label>
+                    <div class="col-md-10">
+                        <input class="form-control" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="The Email field is required." id="Email" name="Email" type="text" value="" />
+                        <span class="field-validation-valid text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="Password">Password</label>
+                    <div class="col-md-10">
+                        <input class="form-control" data-val="true" data-val-required="The Password field is required." id="Password" name="Password" type="password" />
+                        <span class="field-validation-valid text-danger" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <div class="checkbox">
+                            <input data-val="true" data-val-required="The Remember me? field is required." id="RememberMe" name="RememberMe" type="checkbox" value="true" /><input name="RememberMe" type="hidden" value="false" />
+                            <label for="RememberMe">Remember me?</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Log in" class="btn btn-default" />
+                    </div>
+                </div>
+                <p>
+                    <a href="/Account/Register">Register as a new user</a>
+                </p>
+</form>        </section>
+    </div>
+    <div class="col-md-4">
+        <section id="socialLoginForm">
+            
+<h4>Use another service to log in.</h4>
+<hr />
+<form action="/Account/ExternalLogin?ReturnUrl=HelloWorld" method="post"><!-- request verification token -->            <div id="socialLoginList">
+                <p>
+                        <button type="submit" class="btn btn-default" id="Obsidian Portal" name="provider" value="Obsidian Portal" title="Log in using your Obsidian Portal account">Obsidian Portal</button>
+                </p>
+            </div>
+</form>
+
+        </section>
+    </div>
+</div>
+
+
+        <hr />
+        <footer>
+            <p>&copy; 2016 -My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    <script src="/Scripts/jquery-1.10.2.js"></script>
+
+    <script src="/Scripts/bootstrap.js"></script>
+<script src="/Scripts/respond.js"></script>
+
+    
+    <script src="/Scripts/jquery.validate.js"></script>
+<script src="/Scripts/jquery.validate.unobtrusive.js"></script>
+
+
+</body>
+</html>

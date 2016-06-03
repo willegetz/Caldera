@@ -17,7 +17,7 @@ namespace Caldera
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            UnitTestBootStrap.Register("Caldera.Tests");
+            UnitTestBootStrap.RegisterWithTestCondition("Caldera.Tests");
         }
     }
 }
